@@ -1,0 +1,24 @@
+<view class="container">
+    <view wx:if="{{!checkInTimeConfig}}">
+        <view>今天无需打卡哦~</view>
+    </view>
+    <view wx:else class="config-check-in-time">
+        <view class="config-work-time" style="width: 50%">
+            <view>上班打卡时间</view>
+            <view style="font-size: 35rpx; color: {{ workInTimeColor }}">
+                {{ checkInTimeConfig.workInTime }}
+            </view>
+        </view>
+        <view class="config-work-time" style="width: 50%">
+            <view>下班打卡时间</view>
+            <view style="font-size: 35rpx; color: {{ workOutTimeColor }}">
+                {{ checkInTimeConfig.workOutTime }}
+            </view>
+        </view>
+    </view>
+    <view class="check-in-panel">
+        <button class="check-in-btn" bind:tap="checkIn">
+            <view class="check-in-btn-text">打卡</view>
+        </button>
+    </view>
+</view>

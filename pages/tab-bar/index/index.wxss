@@ -1,0 +1,35 @@
+.config-check-in-time {
+    display: inline-block;
+    width: 100%;
+}
+
+.config-work-time {
+    text-align: center;
+    display: inline-block;
+    font-size: 40rpx;
+}
+
+.check-in-panel {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.check-in-btn {
+    background-image: linear-gradient(rgb(83,168,255), #518f9f);
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px #518f9f;
+}
+
+.check-in-btn-text {
+    font-size: 60rpx;
+    line-height: 34rpx;
+    color: #ffffff;
+}

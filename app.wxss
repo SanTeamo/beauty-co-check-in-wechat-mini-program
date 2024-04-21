@@ -1,0 +1,9 @@
+.container {
+  position: absolute;
+  background-color: #eff4fa;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}

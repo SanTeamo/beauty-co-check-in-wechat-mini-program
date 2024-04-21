@@ -1,0 +1,21 @@
+{
+  "name": "beauty-co-check-in-miniprogram",
+  "version": "1.0.0",
+  "description": "美co子打卡小程序",
+  "main": "app.js",
+  "scripts": {
+    "prettier": "prettier --write ./src/**/*.{js,wxs,wxml,wxss,json} *.{js,wxs,wxml,wxss,json}"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "echarts": "^5.3.3",
+    "eslint": "6.7.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "moment": "^2.24.0",
+    "prettier": "2.0.5",
+    "prettier-eslint-cli": "5.0.0"
+  }
+}
