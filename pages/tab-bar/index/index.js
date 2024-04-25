@@ -9,19 +9,40 @@ const app = getApp()
 
 Page({
     data: {
-        checkInTimeConfig: null,
+        checkInTimeConfig: {},
         workInState: null,
         workOutState: null,
         workInStateDic: WorkInState,
         workOutStateDic: WorkOutState,
         workInTimeColor: '',
         workOutTimeColor: '',
+        time: '',
+        timer: null,
     },
     onLoad() {
+        this.timeInterval()
         this.getTodayCheckInTimeConfig()
+    },
+    timeInterval() {
+        let time = this.data.time
+        this.setData({
+            timer: setInterval(() => {
+                time = momentUtil.formatDateTime(new Date())
+                this.setData({
+                    time,
+                })
+                if (time === 0) {
+                    // 页面跳转后，要把定时器清空掉，免得浪费性能
+                    clearInterval(this.data.timer)
+                }
+            }, 1000),
+        })
     },
     async getTodayCheckInTimeConfig() {
         try {
+            wx.showLoading({
+                title: '获取打卡规则中',
+            })
             await this.serviceOnlineCheck()
             let res = await getTodayCheckInTimeConfig()
             const checkInTimeConfig = res.data.data
@@ -61,6 +82,8 @@ Page({
         } catch (e) {
             console.error(e)
             showToastError(e)
+        } finally {
+            wx.hideLoading()
         }
     },
     async serviceOnlineCheck() {
