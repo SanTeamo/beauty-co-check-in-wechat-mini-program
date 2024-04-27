@@ -14,7 +14,7 @@ export const getTodayCheckInTimeConfig = async () => {
 const getTodayCheckInTimeConfigOffline = () => {
   const weekday = momentUtil.createMoment().get('weekday') + 1
   let todayCheckInTimeConfig = null
-  if (weekday >= 2 && weekday <= 5) {
+  if (weekday !== 5) {
     todayCheckInTimeConfig = {
       weekday,
       workInTime: '09:30:00',

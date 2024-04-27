@@ -5,6 +5,7 @@ const baseUrl = '/common'
 
 export const serviceOnlineCheck = async () => {
   return new Promise((resolve, reject) => {
+    globalData.serviceOnline = false
     const requestTask = wx.request({
       url: globalData.requestUrl + baseUrl + '/service-online-check',
       method: 'get',
@@ -21,6 +22,7 @@ export const serviceOnlineCheck = async () => {
           reject(res)
           return
         }
+        globalData.serviceOnline = true
         resolve(res)
       },
       fail: (err) => {

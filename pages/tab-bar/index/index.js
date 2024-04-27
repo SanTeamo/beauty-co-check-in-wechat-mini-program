@@ -90,10 +90,8 @@ Page({
     }
   },
   async serviceOnlineCheck() {
-    app.globalData.serviceOnline = false
     try {
       await serviceOnlineCheck()
-      app.globalData.serviceOnline = true
     } catch (e) {
       console.error(e)
     }

@@ -89,3 +89,10 @@ const checkInOffline = async () => {
     },
   }
 }
+
+export const uploadRecord = async (checkInRecordList) => {
+  if (!app.globalData.serviceOnline) {
+    throw new Error('服务器不在线')
+  }
+  return await httpPost(baseUrl + '/upload-record', checkInRecordList)
+}

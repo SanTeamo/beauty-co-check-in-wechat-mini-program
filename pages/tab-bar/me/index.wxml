@@ -1,3 +1,6 @@
-<view>
-  to be continued
+<view class="container">
+  <van-toast id="van-toast" />
+  <van-cell-group inset>
+    <van-cell title="上传打卡记录" is-link bind:click="uploadCheckInRecord"/>
+  </van-cell-group>
 </view>
