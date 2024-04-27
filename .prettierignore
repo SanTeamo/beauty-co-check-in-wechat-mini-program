@@ -1,0 +1,27 @@
+# .prettierignore 文件配置或者 CLI 设置 --ignore-path 选项。
+*.min.js
+
+/node_modules
+/miniprogram_npm
+/dist
+/src/lib
+
+# OS
+.DS_Store
+.idea
+.vscode
+.editorconfig
+.npmrc
+package-lock.json
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.png
+*ignore
+
+
+## Built-files
+.cache
+dist

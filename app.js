@@ -5,7 +5,6 @@ const globalData = {
 }
 
 App({
-  onLaunch() {
-  },
+  onLaunch() {},
   globalData,
 })

@@ -29,3 +29,4 @@ yarn-error.log*
 
 # customize perference
 dist
+package-lock.json

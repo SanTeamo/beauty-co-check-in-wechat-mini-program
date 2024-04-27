@@ -1,0 +1,7 @@
+# 忽略文件
+*.min.js
+typings
+node_modules
+miniprogram_npm
+dist
+src/lib

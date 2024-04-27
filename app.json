@@ -1,8 +1,5 @@
 {
-  "pages": [
-    "pages/tab-bar/index/index",
-    "pages/tab-bar/me/index"
-  ],
+  "pages": ["pages/tab-bar/index/index", "pages/tab-bar/me/index"],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Weixin",
